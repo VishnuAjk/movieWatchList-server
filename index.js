@@ -21,7 +21,7 @@ app.use('/movies',jwtAuth ,movieRouter);
 
 
 
-app.listen(3100,()=>{
-    console.log("listening at 3100");
+app.listen(process.env.PORT || 3100,()=>{
+    console.log("listening at port");
     connectToDatabase();
 })
