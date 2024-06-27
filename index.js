@@ -11,6 +11,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Welcome to Movie Watch List API');
+});
 
 app.use('/user', userRouter);
 app.use('/movies',jwtAuth ,movieRouter);
