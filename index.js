@@ -8,7 +8,11 @@ import movieRouter from "./src/Routes/movie.routes.js";
 import { connectToDatabase } from "./src/Config/mongoose.js";
 import jwtAuth from "./src/Middlewares/jwtAuth.middleware.js";
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://dancing-klepon-234519.netlify.app',
+    methods: ['GET', 'POST', 'DELETE'],
+    credentials: true  // If you are using cookies or session-based authentication
+}));
 app.use(express.json());
 
 app.get('/', (req, res) => {
