@@ -9,7 +9,7 @@ import { connectToDatabase } from "./src/Config/mongoose.js";
 import jwtAuth from "./src/Middlewares/jwtAuth.middleware.js";
 const app = express();
 app.use(cors({
-    origin: ["https://movie-watch-list-client.vercel.app"],
+    origin: ["https://movie-watch-list-client.vercel.app/"],
     methods: ["POST", "GET", "DELETE"],
     credentials: true
 }));
