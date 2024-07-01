@@ -11,6 +11,7 @@ const app = express();
 app.use(cors({
     origin: 'https://dancing-klepon-234519.netlify.app',
     methods: ['GET', 'POST', 'DELETE'],
+    allowedHeaders:'*',
     credentials: true  // If you are using cookies or session-based authentication
 }));
 app.use(express.json());
